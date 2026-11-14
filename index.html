@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Binu Abdulbasheer | Official Portfolio</title>
+<meta name="description" content="Official portfolio of Binu Abdulbasheer, Advertising Technician, Web Creator and Digital Enthusiast.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --primary:#246bfd;
+ --dark:#172238;
+ --muted:#748096;
+ --light:#f5f8ff;
+ --border:#e8edf5;
+ --white:#fff;
+ --shadow:0 15px 45px rgba(26,48,85,.07);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+ font-family:'Inter','Noto Sans Malayalam',sans-serif;
+ color:var(--dark);background:#fff;
+ line-height:1.7;overflow-x:hidden;
+}
+body.ml{font-family:'Noto Sans Malayalam',sans-serif}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1120px,90%);margin:auto}
+img{max-width:100%;display:block}
+
+/* NAVIGATION */
+header{
+ position:fixed;top:0;width:100%;z-index:1000;
+ background:rgba(255,255,255,.94);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--border);
+}
+nav{
+ height:76px;display:flex;align-items:center;
+ justify-content:space-between;
+}
+.logo{font-size:25px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--primary)}
+.nav-right{display:flex;align-items:center;gap:25px}
+.nav-links{display:flex;list-style:none;gap:27px}
+.nav-links a{font-size:13px;font-weight:600;color:#657187}
+.nav-links a:hover{color:var(--primary)}
+.lang-btn{
+ background:var(--light);border:1px solid var(--border);
+ padding:9px 14px;border-radius:9px;
+ font-weight:700;color:var(--primary);
+}
+.menu-btn{
+ display:none;border:0;background:none;font-size:25px;
+ color:var(--dark);
+}
+
+/* HERO */
+.hero{
+ min-height:750px;padding:150px 0 90px;
+ display:flex;align-items:center;
+ background:
+ radial-gradient(circle at 85% 25%,#eaf2ff 0,transparent 28%),
+ linear-gradient(180deg,#fff,#fbfcff);
+}
+.hero-grid{
+ display:grid;grid-template-columns:1.2fr .8fr;
+ gap:65px;align-items:center;
+}
+.eyebrow{
+ display:inline-flex;align-items:center;gap:9px;
+ background:#edf4ff;color:var(--primary);
+ border-radius:30px;padding:9px 16px;
+ font-size:12px;font-weight:700;
+ margin-bottom:24px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:#27bd86}
+.hero h1{
+ font-size:clamp(42px,6vw,70px);
+ line-height:1.12;letter-spacing:-2.5px;
+ font-weight:800;
+}
+.hero h1 span{color:var(--primary)}
+.hero h3{font-size:17px;margin-top:20px;font-weight:600}
+.hero-desc{
+ max-width:560px;color:var(--muted);
+ margin:18px 0 28px;font-size:15px;
+}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{
+ padding:13px 22px;border-radius:9px;
+ font-size:13px;font-weight:700;
+ display:inline-flex;align-items:center;
+ justify-content:center;gap:8px;
+ transition:.25s;border:1px solid var(--border);
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn-outline{background:#fff;color:var(--dark)}
+.hero-photo{
+ width:min(360px,100%);height:420px;
+ margin:auto;position:relative;
+}
+.photo-frame{
+ width:100%;height:100%;
+ border-radius:25px;overflow:hidden;
+ background:#eaf1fc;
+ border:8px solid white;
+ box-shadow:var(--shadow);
+}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{
+ width:100%;height:100%;
+ display:flex;align-items:center;justify-content:center;
+ flex-direction:column;color:#7b91b1;
+}
+.photo-placeholder strong{font-size:80px;color:var(--primary)}
+.photo-placeholder span{font-size:12px}
+.photo-label{
+ position:absolute;bottom:25px;left:-30px;
+ background:white;padding:15px 20px;
+ border-radius:12px;box-shadow:var(--shadow);
+ font-size:12px;font-weight:700;
+}
+.photo-label small{display:block;color:var(--muted);font-weight:500}
+
+/* GENERAL SECTIONS */
+section{padding:100px 0}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head small{
+ color:var(--primary);font-size:11px;
+ font-weight:800;letter-spacing:2px;text-transform:uppercase;
+}
+.section-head h2{
+ font-size:38px;letter-spacing:-1px;
+ margin-top:8px;
+}
+.section-head p{color:var(--muted);font-size:14px;margin-top:8px}
+.about-grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:50px;align-items:center;
+}
+.about-text h3{font-size:27px;line-height:1.4;margin-bottom:18px}
+.about-text p{color:var(--muted);font-size:14px;margin-bottom:15px}
+.info-card{
+ border:1px solid var(--border);border-radius:17px;
+ padding:25px;background:white;box-shadow:var(--shadow);
+}
+.info-row{
+ display:flex;justify-content:space-between;
+ gap:12px;padding:14px 0;
+ border-bottom:1px solid var(--border);font-size:13px;
+}
+.info-row:last-child{border:0}
+.info-row span{color:var(--muted);text-align:right}
+
+/* SKILLS */
+.skills-section{background:var(--light)}
+.skills-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.skill{
+ background:white;border:1px solid var(--border);
+ padding:27px;border-radius:15px;
+ transition:.3s;
+}
+.skill:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.skill-icon{
+ width:50px;height:50px;border-radius:12px;
+ display:grid;place-items:center;
+ background:#edf4ff;font-size:24px;margin-bottom:18px;
+}
+.skill h3{font-size:16px;margin-bottom:8px}
+.skill p{color:var(--muted);font-size:12px}
+
+/* PROJECTS */
+.project-grid{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:25px;
+}
+.project{
+ border:1px solid var(--border);border-radius:17px;
+ overflow:hidden;background:#fff;transition:.3s;
+}
+.project:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.project-cover{
+ height:180px;display:grid;place-items:center;
+ color:white;font-size:30px;font-weight:800;
+ letter-spacing:1px;
+}
+.cover1{background:linear-gradient(130deg,#1456a8,#28a8d5)}
+.cover2{background:linear-gradient(130deg,#5540b5,#9c82ec)}
+.cover3{background:linear-gradient(130deg,#087e7a,#45c9b2)}
+.cover4{background:linear-gradient(130deg,#a34b89,#ed9cba)}
+.project-body{padding:23px}
+.project-body h3{font-size:20px}
+.project-body p{font-size:13px;color:var(--muted);margin:10px 0 18px}
+.project-link{color:var(--primary);font-size:12px;font-weight:800}
+
+/* EXPERIENCE */
+.experience-section{background:var(--light)}
+.timeline{max-width:750px;margin:auto}
+.timeline-item{
+ border-left:2px solid #cbdcff;
+ padding:5px 0 35px 28px;position:relative;
+}
+.timeline-item:before{
+ content:"";position:absolute;left:-7px;top:8px;
+ width:12px;height:12px;border-radius:50%;
+ background:var(--primary);
+}
+.timeline-item h3{font-size:20px}
+.timeline-item small{color:var(--primary);font-weight:700}
+.timeline-item p{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* CONTACT */
+.contact-section{padding:100px 0}
+.contact-box{
+ background:#f1f6ff;border-radius:23px;
+ text-align:center;padding:55px 25px;
+}
+.contact-box h2{font-size:35px}
+.contact-box p{color:var(--muted);max-width:530px;margin:15px auto 25px;font-size:14px}
+.socials{
+ display:flex;justify-content:center;
+ flex-wrap:wrap;gap:12px;margin-top:28px;
+}
+.social{
+ background:white;border:1px solid var(--border);
+ border-radius:10px;padding:11px 17px;
+ font-size:12px;font-weight:700;
+ transition:.2s;
+}
+.social:hover{color:var(--primary);transform:translateY(-3px)}
+footer{
+ padding:25px 0;border-top:1px solid var(--border);
+ text-align:center;color:var(--muted);font-size:12px;
+}
+footer span{color:var(--primary)}
+
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(25px);transition:.7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:800px){
+ .menu-btn{display:block}
+ .nav-links{
+  display:none;position:absolute;top:76px;left:0;
+  width:100%;padding:25px;background:white;
+  flex-direction:column;gap:18px;
+  border-bottom:1px solid var(--border);
+ }
+ .nav-links.active{display:flex}
+ .nav-right{gap:13px}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .hero{text-align:center;padding-top:130px}
+ .hero-desc{margin:20px auto 25px}
+ .actions{justify-content:center}
+ .hero-photo{width:260px;height:310px;margin-top:25px}
+ .photo-label{left:-15px}
+ .skills-grid{grid-template-columns:repeat(2,1fr)}
+ section{padding:75px 0}
+}
+@media(max-width:480px){
+ .skills-grid,.project-grid{grid-template-columns:1fr}
+ .hero h1{font-size:43px}
+ .section-head h2{font-size:30px}
+ .info-row{font-size:11px}
+ .contact-box h2{font-size:27px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="container">
+  <nav>
+   <a href="#home" class="logo">BINU<span>.</span></a>
+
+   <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+     <li><a href="#home" data-en="Home" data-ml="ഹോം">Home</a></li>
+     <li><a href="#about" data-en="About" data-ml="എന്നെക്കുറിച്ച്">About</a></li>
+     <li><a href="#skills" data-en="Skills" data-ml="കഴിവുകൾ">Skills</a></li>
+     <li><a href="#projects" data-en="Projects" data-ml="പ്രോജക്ടുകൾ">Projects</a></li>
+     <li><a href="#experience" data-en="Experience" data-ml="പരിചയം">Experience</a></li>
+     <li><a href="#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
+    </ul>
+    <button class="lang-btn" id="languageBtn" onclick="toggleLanguage()">മലയാളം</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+   </div>
+  </nav>
+ </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="reveal">
+   <div class="eyebrow">
+    <span class="dot"></span>
+    <span data-en="Available for new opportunities" data-ml="പുതിയ അവസരങ്ങൾക്കായി">Available for new opportunities</span>
+   </div>
+
+   <h1>
+    <span data-en="Hello, I'm" data-ml="ഹലോ, ഞാൻ">Hello, I'm</span><br>
+    Binu <span>Abdulbasheer</span>
+   </h1>
+
+   <h3 data-en="Advertising Technician | Web Creator | Digital Enthusiast"
+       data-ml="അഡ്വർടൈസിംഗ് ടെക്നീഷ്യൻ | വെബ് ക്രിയേറ്റർ | ഡിജിറ്റൽ പ്രേമി">
+    Advertising Technician | Web Creator | Digital Enthusiast
+   </h3>
+
+   <p class="hero-desc"
+      data-en="I combine practical technical experience with creativity and technology. I enjoy developing websites, creating digital platforms and turning ideas into reality."
+      data-ml="സാങ്കേതിക മേഖലയിലെ പ്രായോഗിക പരിചയവും സർഗാത്മകതയും സാങ്കേതികവിദ്യയും ഒരുമിപ്പിക്കാൻ ഞാൻ ഇഷ്ടപ്പെടുന്നു. വെബ്സൈറ്റുകളും ഡിജിറ്റൽ പ്ലാറ്റ്ഫോമുകളും നിർമ്മിക്കുകയും ആശയങ്ങളെ യാഥാർത്ഥ്യമാക്കുകയും ചെയ്യുന്നു.">
+    I combine practical technical experience with creativity and technology. I enjoy developing websites, creating digital platforms and turning ideas into reality.
+   </p>
+
+   <div class="actions">
+    <a href="#projects" class="btn btn-primary" data-en="Explore Projects ↗" data-ml="പ്രോജക്ടുകൾ കാണുക ↗">Explore Projects ↗</a>
+    <a href="#contact" class="btn btn-outline" data-en="Contact Me" data-ml="ബന്ധപ്പെടുക">Contact Me</a>
+   </div>
+  </div>
+
+  <div class="hero-photo reveal">
+   <div class="photo-frame">
+    <img src="profile.jpg" alt="Binu Abdulbasheer"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="photo-placeholder" style="display:none">
+     <strong>B</strong>
+     <span>Upload profile.jpg</span>
+    </div>
+   </div>
+   <div class="photo-label">
+    Binu Abdulbasheer
+    <small>Personal Portfolio</small>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="container">
+  <div class="section-head reveal">
+   <small data-en="GET TO KNOW ME" data-ml="എന്നെ അറിയാം">GET TO KNOW ME</small>
+   <h2 data-en="About Me" data-ml="എന്നെക്കുറിച്ച്">About Me</h2>
+   <p data-en="My journey, interests and ambitions."
+      data-ml="എന്റെ യാത്രയും താൽപര്യങ്ങളും ലക്ഷ്യങ്ങളും.">My journey, interests and ambitions.</p>
+  </div>
+
+  <div class="about-grid">
+   <div class="about-text reveal">
+    <h3 data-en="Creativity Meets Technology"
+        data-ml="സർഗാത്മകതയും സാങ്കേതികവിദ്യയും ഒരുമിക്കുമ്പോൾ">
+     Creativity Meets Technology
+    </h3>
+    <p data-en="I am Binu Abdulbasheer, an Advertising Technician with experience in signage installation, repair and maintenance."
+       data-ml="ഞാൻ ബിനു അബ്ദുൽബഷീർ. സൈൻബോർഡുകളുടെ ഇൻസ്റ്റലേഷൻ, റിപ്പയർ, മെയിന്റനൻസ് മേഖലകളിൽ പരിചയമുള്ള ഒരു അഡ്വർടൈസിംഗ് ടെക്നീഷ്യനാണ്.">
+     I am Binu Abdulbasheer, an Advertising Technician with experience in signage installation, repair and maintenance.
+    </p>
+    <p data-en="Beyond my professional work, I am passionate about website development, digital platforms, creative design and technology."
+       data-ml="എന്റെ പ്രൊഫഷണൽ ജോലികൾക്കപ്പുറം വെബ്സൈറ്റ് നിർമ്മാണം, ഡിജിറ്റൽ പ്ലാറ്റ്ഫോമുകൾ, ക്രിയേറ്റീവ് ഡിസൈൻ, ടെക്നോളജി എന്നിവയിൽ എനിക്ക് താൽപര്യമുണ്ട്.">
+     Beyond my professional work, I am passionate about website development, digital platforms, creative design and technology.
+    </p>
+    <p data-en="I believe every idea can become something meaningful through learning, dedication and creativity."
+       data-ml="പഠനത്തിലൂടെയും അർപ്പണബോധത്തിലൂടെയും സർഗാത്മകതയിലൂടെയും ഓരോ ആശയവും മികച്ച ഒന്നായി മാറ്റാൻ കഴിയുമെന്ന് ഞാൻ വിശ്വസിക്കുന്നു.">
+     I believe every idea can become something meaningful through learning, dedication and creativity.
+    </p>
+   </div>
+
+   <div class="info-card reveal">
+    <div class="info-row"><strong>Name</strong><span>Binu Abdulbasheer</span></div>
+    <div class="info-row"><strong>Profession</strong><span>Advertising Technician</span></div>
+    <div class="info-row"><strong>Interests</strong><span>Technology & Web</span></div>
+    <div class="info-row"><strong>Speciality</strong><span>Digital Projects</span></div>
+    <div class="info-row"><strong>Website</strong><span>savidya.info</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+ <div class="container">
+  <div class="section-head reveal">
+   <small>MY EXPERTISE</small>
+   <h2 data-en="Skills & Interests" data-ml="കഴിവുകളും താൽപര്യങ്ങളും">Skills & Interests</h2>
+   <p data-en="Areas I work with and continuously explore."
+      data-ml="ഞാൻ പ്രവർത്തിക്കുകയും പഠിച്ചുകൊണ്ടിരിക്കുകയും ചെയ്യുന്ന മേഖലകൾ.">Areas I work with and continuously explore.</p>
+  </div>
+
+  <div class="skills-grid">
+   <div class="skill reveal"><div class="skill-icon">🛠️</div><h3>Signage Installation</h3><p>Signboard installation, repair and maintenance.</p></div>
+   <div class="skill reveal"><div class="skill-icon">🌐</div><h3>Web Development</h3><p>Website development and responsive layouts.</p></div>
+   <div class="skill reveal"><div class="skill-icon">💻</div><h3>HTML & CSS</h3><p>Modern website structure and visual design.</p></div>
+   <div class="skill reveal"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Interactive website functionality.</p></div>
+   <div class="skill reveal"><div class="skill-icon">📱</div><h3>Web Applications</h3><p>Mobile-friendly applications and PWA concepts.</p></div>
+   <div class="skill reveal"><div class="skill-icon">🎨</div><h3>Creative Design</h3><p>Branding, graphics and digital creativity.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+ <div class="container">
+  <div class="section-head reveal">
+   <small>MY CREATIONS</small>
+   <h2 data-en="Featured Projects" data-ml="എന്റെ പ്രോജക്ടുകൾ">Featured Projects</h2>
+   <p data-en="Digital ideas and projects I have worked on."
+      data-ml="ഞാൻ നിർമ്മിച്ച ഡിജിറ്റൽ ആശയങ്ങളും പ്രോജക്ടുകളും.">Digital ideas and projects I have worked on.</p>
+  </div>
+
+  <div class="project-grid">
+
+   <article class="project reveal">
+    <div class="project-cover cover1">SAVIDYA</div>
+    <div class="project-body">
+     <h3>Savidya Education</h3>
+     <p>Kerala syllabus educational platform offering learning resources, study materials and educational content.</p>
+     <a href="https://www.savidya.info/" target="_blank" rel="noopener" class="project-link">VISIT WEBSITE ↗</a>
+    </div>
+   </article>
+
+   <article class="project reveal">
+    <div class="project-cover cover2">SAVIDYA TV</div>
+    <div class="project-body">
+     <h3>Savidya TV</h3>
+     <p>Digital television streaming project with live channels and a modern viewing interface.</p>
+     <a href="https://tv.savidya.info/" target="_blank" rel="noopener" class="project-link">VISIT WEBSITE ↗</a>
+    </div>
+   </article>
+
+   <article class="project reveal">
+    <div class="project-cover cover3">SAVIDYA FM</div>
+    <div class="project-body">
+     <h3>Savidya FM</h3>
+     <p>Online radio platform focused on digital audio and Malayalam radio entertainment.</p>
+     <a href="https://fm.savidya.info/" target="_blank" rel="noopener" class="project-link">VISIT WEBSITE ↗</a>
+    </div>
+   </article>
+
+   <article class="project reveal">
+    <div class="project-cover cover4">TRIP PLANNER</div>
+    <div class="project-body">
+     <h3>Trip Planner</h3>
+     <p>Travel planning application for itineraries, group expenses and trip management.</p>
+     <a href="https://trip.savidya.info/" target="_blank" rel="noopener" class="project-link">VISIT WEBSITE ↗</a>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+ <div class="container">
+  <div class="section-head reveal">
+   <small>MY JOURNEY</small>
+   <h2 data-en="Professional Experience" data-ml="പ്രൊഫഷണൽ പരിചയം">Professional Experience</h2>
+  </div>
+
+  <div class="timeline">
+   <div class="timeline-item reveal">
+    <small>PROFESSIONAL CAREER</small>
+    <h3>Advertising Technician</h3>
+    <p>Signage installation, repair and maintenance. Experienced in using tools and equipment, working at heights, following safety procedures and collaborating with teams to complete projects.</p>
+   </div>
+   <div class="timeline-item reveal">
+    <small>PERSONAL PROJECTS</small>
+    <h3>Web & Digital Development</h3>
+    <p>Creating educational websites, digital media platforms and travel applications while continuously learning new technologies.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+ <div class="container">
+  <div class="contact-box reveal">
+   <small style="color:var(--primary);font-weight:800;letter-spacing:2px">GET IN TOUCH</small>
+   <h2 data-en="Let's Connect!" data-ml="നമുക്ക് ബന്ധപ്പെടാം!">Let's Connect!</h2>
+   <p data-en="Have an idea, collaboration or opportunity? Feel free to connect with me through the channels below."
+      data-ml="പുതിയ ആശയങ്ങളോ സഹകരണ അവസരങ്ങളോ ഉണ്ടോ? താഴെ നൽകിയിരിക്കുന്ന മാർഗങ്ങളിലൂടെ എന്നെ ബന്ധപ്പെടാം.">
+    Have an idea, collaboration or opportunity? Feel free to connect with me through the channels below.
+   </p>
+
+   <div class="actions" style="justify-content:center">
+    <a class="btn btn-primary" href="mailto:YOUR_EMAIL@example.com">✉ Email Me</a>
+    <a class="btn btn-outline" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">◉ WhatsApp</a>
+   </div>
+
+   <div class="socials">
+    <a class="social" href="YOUR_FACEBOOK_URL" target="_blank" rel="noopener">Facebook ↗</a>
+    <a class="social" href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener">Instagram ↗</a>
+    <a class="social" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">WhatsApp ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="container">
+  <p>© <span id="year"></span> Binu Abdulbasheer. All Rights Reserved.</p>
+  <p style="margin-top:5px">Designed with <span>♥</span> and creativity.</p>
+ </div>
+</footer>
+
+<script>
+// LANGUAGE SWITCH
+let currentLanguage='en';
+
+function toggleLanguage(){
+ currentLanguage=currentLanguage==='en'?'ml':'en';
+ document.querySelectorAll('[data-en]').forEach(el=>{
+  el.textContent=el.dataset[currentLanguage];
+ });
+ document.getElementById('languageBtn').textContent=
+  currentLanguage==='en'?'മലയാളം':'English';
+ document.body.classList.toggle('ml',currentLanguage==='ml');
+ document.documentElement.lang=currentLanguage;
+}
+
+// MOBILE MENU
+function toggleMenu(){
+ document.getElementById('navLinks').classList.toggle('active');
+}
+document.querySelectorAll('.nav-links a').forEach(a=>{
+ a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('active');
+ });
+});
+
+// YEAR
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// SCROLL ANIMATION
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('visible');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
